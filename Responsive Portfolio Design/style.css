@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background: #100F3E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+.content-container{
+    color: white;
+    width: 92vw;
+    height: 87vh;
+    background-color: #010021;
+    box-shadow: 3px 3px 50px 2px rgb(216, 94, 212);
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h2{
+    font-size: 2vw;
+    margin-left: 10vw;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 3.5vw;
+    margin-right: 4vw;
+}
+.navbar li{
+    display: flex;
+    text-decoration: none;
+}
+.navbar ul li a{
+    font-size: 1.1vw;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li a:hover{
+    color: rgba(216, 94, 212);
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.navbar ul i{
+    display: none;
+    margin-right: 2.2vw;
+    font-size: 30px;
+}
+
+.main-content{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 8vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left-side-content{
+    width: 50%;
+    height: 50vh;
+    padding: 5vw 7vw;
+}
+
+.left-side-content h1{
+    font-size: 3vw;
+    margin-top: -3vw;
+    margin-left: 3vw;
+}
+
+.left-side-content .work{
+    font-size: 1vw;
+    margin-top: 2vw;
+    margin-left: 6vw;
+}
+
+.left-side-content .work i{
+    color: rgb(7, 244, 7);
+    margin-right: 1.3vh;
+}
+
+.left-side-content button{
+    font-size: 1vw;
+    padding: 0.5vw;
+    background-color: transparent;
+    border: 1px solid rgb(153, 0, 255);
+    color: white;
+    border-radius: 20px;
+    margin-left: 6vw;
+    margin-top: 2vw;
+    cursor: pointer;
+}
+.left-side-content button:hover{
+    transition: all ease-in-out 0.5s;
+    transform: scale(1.1);
+    background-color: transparent;
+    box-shadow: 3px 2px 10px 2px rgb(153, 0, 255);
+}
+
+.left-side-content button a{
+    text-decoration: none;
+    color: white;
+}
+#element {
+    background-color: rgb(211,16,129);                                                                                                                                              
+    background: -webkit-linear-gradient(229deg, rgba(211,16,129,1) 0%, rgba(195,9,179,1) 65%, rgba(237,138,157,1) 100%);
+    background-clip: text;                                       
+    -webkit-background-clip: text;       
+    -webkit-text-fill-color: transparent;
+}  
+
+.right-side-content{
+    width: 50%;
+    height: calc(87vh - 8vh);
+}
+
+.right-side-content img{
+    width: 32vw;
+    height: 60vh;
+    margin-top: 3vw;
+}
+
+.cursor1{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+
+}
+.cursor2{
+    position: fixed;
+    width: 8px;
+    border: 1px solid rgb(255, 255, 255);
+    height: 8px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+}
+
+p:hover ~ .cursor1{
+    transform: translate(-50%,-50%) scale(1.5);
+    background-color: rgba(128, 128, 128, 0.447);
+    opacity: .5;
+}
+p:hover ~ .cursor2{
+    opacity: 0;
+}
+
+@media (max-width: 600px) {
+
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .header {
+        height: 6vh;
+    }
+    .header h2 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .navbar ul li{
+        display: none;
+    }
+    .navbar ul i{
+        display: block;
+    }
+    .main-content {
+        width: 100%;
+        height: calc(100% - 6vh);
+        flex-direction: column;
+    }
+    .main-content .left-side-content{
+        width: 100vw;
+        height: 20vh;
+        margin: auto;
+    }
+
+    .left-side-content h1{
+        font-size: 30px;
+    }
+    .left-side-content h3{
+        font-size: 15px;
+    }
+    .left-side-content button{
+        font-size: 4vw;
+        padding: 1.5vw;
+    }
+    .right-side-content img{
+        width: 60vw;
+        height: 35vh;
+        margin-top: 38vw;
+    }
+}

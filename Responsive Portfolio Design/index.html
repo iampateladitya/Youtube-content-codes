@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Aditechz</title>
+</head>
+
+<body>
+    <div class="cursor1"></div>
+    <div class="cursor2"></div>
+
+    <div class="container">
+        <div class="content-container">
+            <div class="header">
+                <h2><u>Aditechz</u></h2>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Porfolio</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                        <li><a href="#">Services</a></li>
+                        <i class='bx bx-menu'></i>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="left-side-content">
+                    <h1>Aditya Patel <br>
+                        <span id="element"></span> <br>
+                        Crafting Designs <br> That Peoples Love
+                    </h1>
+                    <div class="work">
+                        <h3><i class='bx bxs-check-circle'></i>Website Development</h3>
+                        <h3><i class='bx bxs-check-circle'></i>Web designer</h3>
+                        <h3><i class='bx bxs-check-circle'></i>Software Development</h3>
+                        <h3><i class='bx bxs-check-circle'></i>Responsive On Every Device</h3>
+                    </div>
+                    <button type="submit"> <a href="#">Hire Me </a></button>
+                    <button type="submit"><a href="cv.pdf" target="_blank" > Download CV</a></button>
+                </div>
+                <div class="right-side-content">
+                    <img src="right-side-Image-.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        let cursor1 = document.querySelector(".cursor1")
+        let cursor2 = document.querySelector(".cursor2")
+        document.addEventListener("mousemove", (e) => {
+            cursor1.style.cssText = cursor2.style.cssText = "left :" + e.clientX + "px; top: " + e.clientY + "px";
+        })
+
+        var typed = new Typed('#element', {
+            strings: ['Web Designer.', 'Website Developer.', 'Responsive Designs.', 'Software Developer.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
